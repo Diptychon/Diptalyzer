@@ -1,4 +1,4 @@
-﻿﻿package de.diptalyzer.model;
+﻿package de.diptalyzer.model;
 
 import java.io.File;
 import java.io.IOException;
@@ -27,15 +27,17 @@ public class PropertiesReader {
 	 */
 	public List<Glyph> read() throws IOException {
 		byte[] bytes = Files.readAllBytes(file.toPath());
-		String[] split = new String(bytes).split("\n");
+		// TODO: Das sollte eigentlich schon in UTF-8 abgespeichert werden
+		String[] split = new String(bytes, "ISO-8859-1").split("\n");
 		String[] columns = split[0].split(" ");
 
 		File zipFile = new File(file.getParentFile(), "Glyphs.zip");
-		
+
 		if (!zipFile.exists()) {
-		    throw new IOException("Glyph-Archiv nicht gefunden: " + zipFile.getAbsolutePath());
+			throw new IOException("Glyph-Archiv nicht gefunden: "
+			        + zipFile.getAbsolutePath());
 		}
-		
+
 		List<Glyph> result = new ArrayList<>();
 		for (int i = 1; i < split.length; i++) {
 			if (!split[i].isEmpty()) {
