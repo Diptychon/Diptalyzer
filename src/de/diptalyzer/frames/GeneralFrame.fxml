@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+	<!-- fx:controller="de.diptalyzer.controller.GeneralInformationFrameController"-->
+<GridPane hgap="20.0" vgap="20.0"
+	xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8"
+	alignment="TOP_CENTER" >
+	<Text text="Seiten:" GridPane.rowIndex="0" />
+
+	<Text text="Zeilen:" GridPane.rowIndex="1" />
+
+	<Text text="Glyphen:" GridPane.rowIndex="2" />
+
+	<Text text=" - davon verschieden:" GridPane.rowIndex="3" />
+
+	<Text text=" - am häufigsten:" GridPane.rowIndex="4" />
+
+	<Text text=" - Anzahl:" GridPane.rowIndex="5" />
+
+	<padding>
+		<Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+	</padding>
+</GridPane>

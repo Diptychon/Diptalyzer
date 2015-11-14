@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.HBox?>
+
+<GridPane hgap="20.0" vgap="20.0"
+	fx:controller="de.diptalyzer.controller.FilterInformationFrameController"
+	xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8"
+	alignment="TOP_CENTER" fx:id="pane">
+	<HBox alignment="CENTER" GridPane.columnSpan="2">
+		<Text text="Filterung nach " />
+		<Text fx:id="filterName" />
+	</HBox>
+
+	<Text text="Anzahl:" GridPane.rowIndex="1" />
+	<Text fx:id="count" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+	<Text text="Durchschnitt:" GridPane.rowIndex="2" />
+	<Text fx:id="average" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+	<Text text="Minimum:" GridPane.rowIndex="3" />
+	<Text fx:id="minimum" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+	<Text text="Maximum:" GridPane.rowIndex="4" />
+	<Text fx:id="maximum" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+
+	<Text text="Standardabweichung:" GridPane.rowIndex="5" />
+	<Text fx:id="standardDeviation" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+
+	<Text text="95%-Interval:" GridPane.rowIndex="6" />
+	<Text fx:id="interval" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+	<padding>
+		<Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+	</padding>
+</GridPane>
