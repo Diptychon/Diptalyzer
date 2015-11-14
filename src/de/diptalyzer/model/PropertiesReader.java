@@ -1,4 +1,4 @@
-﻿package de.diptalyzer.model;
+﻿﻿package de.diptalyzer.model;
 
 import java.io.File;
 import java.io.IOException;
@@ -30,10 +30,16 @@ public class PropertiesReader {
 		String[] split = new String(bytes).split("\n");
 		String[] columns = split[0].split(" ");
 
+		File zipFile = new File(file.getParentFile(), "Glyphs.zip");
+		
+		if (!zipFile.exists()) {
+		    throw new IOException("Glyph-Archiv nicht gefunden: " + zipFile.getAbsolutePath());
+		}
+		
 		List<Glyph> result = new ArrayList<>();
 		for (int i = 1; i < split.length; i++) {
 			if (!split[i].isEmpty()) {
-				result.add(Glyph.decode(file.getParentFile(), columns, split[i]));
+				result.add(Glyph.decode(zipFile, columns, split[i]));
 			}
 		}
 		return result;
