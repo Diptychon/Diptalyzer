@@ -303,14 +303,14 @@ public class DyptalyzerFX extends Application {
 				gridPane.setPrefWidth(100);
 
 				Tooltip tooltip = new Tooltip();
-				Image image = new Image(glyph.getImageFile().toURI().toURL()
-						.toExternalForm(), 20.0, 20.0, true, true);
+				Image image = new Image(glyph.getImageStream(), 20.0, 20.0, true, true);
 				ImageView imageView = new ImageView(image);
 				tooltip.setGraphic(imageView);
 				tooltip.setStyle("-fx-background-color: #cccccc");
 				Tooltip.install(chart, tooltip);
 				index++;
-			} catch (MalformedURLException e) {
+			} catch (IOException e) {
+				e.printStackTrace();
 			}
 		}
 		return gridPane;

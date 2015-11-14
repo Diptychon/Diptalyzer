@@ -1,8 +1,11 @@
 ﻿package de.diptalyzer.model;
 
 import java.awt.image.BufferedImage;
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.regex.Matcher;
@@ -105,7 +108,7 @@ public class Glyph {
     public BufferedImage getImage() throws IOException {
         if (image == null) {
             try (ZipFile zip = new ZipFile(zipFolder)) {
-                ZipEntry e = zip.getEntry(id);
+                ZipEntry e = zip.getEntry(id + GLYPE_IMAGE_ENDING);
                 if (e == null) {
                     throw new IOException("Bild nicht im Archiv enthalten");
                 }
@@ -113,6 +116,30 @@ public class Glyph {
             }
         }
         return image;
+    }
+
+    /**
+     * Lädt den InputStream zu dem Bild dieser Glyphe und gibt dieses zurück.
+     */
+    public InputStream getImageStream() throws IOException {
+        try (ZipFile zip = new ZipFile(zipFolder)) {
+            final ZipEntry e = zip.getEntry(id + GLYPE_IMAGE_ENDING);
+            if (e == null) {
+                throw new IOException("Bild nicht im Archiv enthalten");
+            }
+            int size = (int) e.getSize();
+            final ByteArrayOutputStream baos = new ByteArrayOutputStream(size);
+            final InputStream is = zip.getInputStream(e);
+            final byte[] buffer = new byte[1024];
+            while (size > 0) {
+                final int toRead = Math.min(1024, size);
+                final int read = is.read(buffer, 0, toRead);
+                baos.write(buffer, 0, read);
+                size -= read;
+            }
+
+            return new ByteArrayInputStream(baos.toByteArray());
+        }
     }
 
     /**

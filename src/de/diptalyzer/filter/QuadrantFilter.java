@@ -50,7 +50,7 @@ public class QuadrantFilter implements GraphFilter {
 	@Override
 	public Chart getChart(Glyph glyph) {
 		try {
-			BufferedImage image = ImageIO.read(glyph.getImageFile());
+			BufferedImage image = glyph.getImage();
 			int[][] data = new int[4][2];
 			for (int x = 0; x < image.getWidth(); x++) {
 				for (int y = 0; y < image.getHeight(); y++) {
@@ -82,6 +82,7 @@ public class QuadrantFilter implements GraphFilter {
 			barChart.getData().add(series);
 			return barChart;
 		} catch (IOException e) {
+			e.printStackTrace();
 			return null;
 		}
 	}
