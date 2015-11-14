@@ -1,4 +1,4 @@
-package de.diptalyzer.controller;
+ï»¿package de.diptalyzer.controller;
 
 import java.net.URL;
 import java.util.List;
@@ -21,38 +21,38 @@ import de.diptalyzer.filter.Filters;
 import de.diptalyzer.model.Glyph;
 
 /**
- * Der Controler für das Hauptfenster.
+ * Der Controler fÃ¼r das Hauptfenster.
  *
  * @author tbrose
  *
  */
 public class DiptalyzerController implements Initializable {
 	/**
-	 * Das Callback-Interface für die Glyph- und Filterauswahl.
+	 * Das Callback-Interface fÃ¼r die Glyph- und Filterauswahl.
 	 *
 	 * @author tbrose
 	 *
 	 */
 	public interface SelectFilterListener {
 		/**
-		 * Callback-Methode für die Glyph- und Filterauswahl.
+		 * Callback-Methode fÃ¼r die Glyph- und Filterauswahl.
 		 */
 		void onSelect(String glyph, Filter filter);
 	}
 
 	/**
-	 * Der Text für die Auswahl keines Filters oder keiner Glyphe.
+	 * Der Text fÃ¼r die Auswahl keines Filters oder keiner Glyphe.
 	 */
-	public static final String CHOOSE = "wählen";
+	public static final String CHOOSE = "wÃ¤hlen";
 
 	/**
-	 * Ausklappbares Menü zum wählen der Glyphe.
+	 * Ausklappbares MenÃ¼ zum wÃ¤hlen der Glyphe.
 	 */
 	@FXML
 	private MenuButton selGlyph;
 
 	/**
-	 * Ausklappbares Menü zum wählen des Filters.
+	 * Ausklappbares MenÃ¼ zum wÃ¤hlen des Filters.
 	 */
 	@FXML
 	private MenuButton selFilter;
@@ -70,33 +70,33 @@ public class DiptalyzerController implements Initializable {
 	private GridPane docPane;
 
 	/**
-	 * Button zum öffnen eines Dokumentes.
+	 * Button zum Ã¶ffnen eines Dokumentes.
 	 */
 	@FXML
 	private Button open;
 
 	/**
-	 * Alle momentan wählbaren Glyphen.
+	 * Alle momentan wÃ¤hlbaren Glyphen.
 	 */
 	private List<String> availableGlyphs;
 
 	/**
-	 * Die momantan ausgewählte Glyphe.
+	 * Die momantan ausgewÃ¤hlte Glyphe.
 	 */
 	private String selectedGlyph = CHOOSE;
 
 	/**
-	 * Der momentan ausgewählte Filter.
+	 * Der momentan ausgewÃ¤hlte Filter.
 	 */
 	private Filter selectedFilter;
 
 	/**
-	 * Das Callback für die Auswahl.
+	 * Das Callback fÃ¼r die Auswahl.
 	 */
 	private SelectFilterListener listener;
 
 	/**
-	 * Initialisiert den Filter-Wähler mit allen verfügbaren Filtern.
+	 * Initialisiert den Filter-WÃ¤hler mit allen verfÃ¼gbaren Filtern.
 	 */
 	@Override
 	public void initialize(URL url, ResourceBundle bundle) {
@@ -112,14 +112,14 @@ public class DiptalyzerController implements Initializable {
 	}
 
 	/**
-	 * De-/Aktiviert die Möglichkeit einen Filter auszufählen.
+	 * De-/Aktiviert die MÃ¶glichkeit einen Filter auszufÃ¤hlen.
 	 */
 	public void setFilterEnabled(boolean enabled) {
 		selFilter.setDisable(!enabled);
 	}
 
 	/**
-	 * Setzt die auszuwählenden Glyphen.
+	 * Setzt die auszuwÃ¤hlenden Glyphen.
 	 */
 	public void setGlyphs(Stream<List<Glyph>> glyphs) {
 		availableGlyphs = glyphs.flatMap(List::stream).map(Glyph::getCharacter)
@@ -145,7 +145,7 @@ public class DiptalyzerController implements Initializable {
 	}
 
 	/**
-	 * Setzt das Callback für die Filterauswahl.
+	 * Setzt das Callback fÃ¼r die Filterauswahl.
 	 */
 	public void setOnSelectListener(SelectFilterListener listener) {
 		this.listener = listener;
@@ -161,7 +161,7 @@ public class DiptalyzerController implements Initializable {
 	}
 
 	/**
-	 * Setzt den Text des Filter-Wählers und gibt ein Callback.
+	 * Setzt den Text des Filter-WÃ¤hlers und gibt ein Callback.
 	 */
 	private void handleFilterSelection(FilterMenuItem item) {
 		final String text = item.getText();
@@ -171,7 +171,7 @@ public class DiptalyzerController implements Initializable {
 	}
 
 	/**
-	 * Setzt den Text des Glyph-Wählers und gibt ein Callback.
+	 * Setzt den Text des Glyph-WÃ¤hlers und gibt ein Callback.
 	 */
 	private void handleGlyphSelection(MenuItem item) {
 		final String text = item.getText();
@@ -182,7 +182,7 @@ public class DiptalyzerController implements Initializable {
 	}
 
 	/**
-	 * Erstellt einen EventHandler für ein MenuItem, der handleGlyphSelection()
+	 * Erstellt einen EventHandler fÃ¼r ein MenuItem, der handleGlyphSelection()
 	 * aufruft.
 	 */
 	private EventHandler<ActionEvent> glyphSelectionHandler(final MenuItem item) {
@@ -195,7 +195,7 @@ public class DiptalyzerController implements Initializable {
 	}
 
 	/**
-	 * Erstellt einen EventHandler für ein MenuItem, der handleFilterSelection()
+	 * Erstellt einen EventHandler fÃ¼r ein MenuItem, der handleFilterSelection()
 	 * aufruft.
 	 */
 	private EventHandler<ActionEvent> filterSelectionHandler(

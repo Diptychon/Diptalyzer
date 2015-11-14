@@ -1,4 +1,4 @@
-package de.diptalyzer.controller;
+ï»¿package de.diptalyzer.controller;
 
 import java.util.List;
 
@@ -6,7 +6,7 @@ import de.diptalyzer.filter.Filter;
 import de.diptalyzer.model.Glyph;
 
 /**
- * Interface für alle Controller, die für ein Dokument geladen werden können.
+ * Interface fÃ¼r alle Controller, die fÃ¼r ein Dokument geladen werden kÃ¶nnen.
  */
 public interface ValuesController {
 	/**

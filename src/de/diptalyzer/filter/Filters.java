@@ -1,4 +1,4 @@
-package de.diptalyzer.filter;
+ï»¿package de.diptalyzer.filter;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -11,7 +11,7 @@ import java.util.List;
  */
 public final class Filters {
 	/**
-	 * Liste aller verfügbaren Filter.
+	 * Liste aller verfÃ¼gbaren Filter.
 	 */
 	private static List<Filter> availableFilters = null;
 
@@ -22,7 +22,7 @@ public final class Filters {
 	}
 
 	/**
-	 * Gibt die Liste aller verfügbaren Filter zurück.
+	 * Gibt die Liste aller verfÃ¼gbaren Filter zurÃ¼ck.
 	 */
 	public static final List<Filter> getAll() {
 		if (availableFilters == null) {
@@ -32,7 +32,7 @@ public final class Filters {
 	}
 
 	/**
-	 * Populiert die Liste und macht sie unveränderbar.
+	 * Populiert die Liste und macht sie unverÃ¤nderbar.
 	 */
 	private static void init() {
 		availableFilters = new ArrayList<>();

@@ -1,10 +1,10 @@
-package de.diptalyzer.filter;
+﻿package de.diptalyzer.filter;
 
 import de.diptalyzer.model.DefaultPropperties;
 import de.diptalyzer.model.Glyph;
 
 /**
- * Filter f�r die Charakteristik 'EXTREMUM'
+ * Filter für die Charakteristik 'EXTREMUM'
  * 
  * @author tbrose
  */

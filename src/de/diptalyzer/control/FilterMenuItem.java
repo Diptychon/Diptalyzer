@@ -1,10 +1,10 @@
-package de.diptalyzer.control;
+ï»¿package de.diptalyzer.control;
 
 import javafx.scene.control.MenuItem;
 import de.diptalyzer.filter.Filter;
 
 /**
- * Ein Menü-Item, welchem ein Filter angehangen ist.
+ * Ein MenÃ¼-Item, welchem ein Filter angehangen ist.
  * 
  * @author tbrose
  */
@@ -16,7 +16,7 @@ public class FilterMenuItem extends MenuItem {
 	private Filter filter;
 
 	/**
-	 * Erzeugt ein neues Menü-Item, welches den Namen des Filters als
+	 * Erzeugt ein neues MenÃ¼-Item, welches den Namen des Filters als
 	 * Anzeigenamen besitzt.
 	 */
 	public FilterMenuItem(Filter filter) {
@@ -24,7 +24,7 @@ public class FilterMenuItem extends MenuItem {
 	}
 
 	/**
-	 * Erzeugt ein neues Menü-Item, welches den übergebenen Namen als
+	 * Erzeugt ein neues MenÃ¼-Item, welches den Ã¼bergebenen Namen als
 	 * Anzeigenamen besitzt.
 	 */
 	public FilterMenuItem(String name, Filter filter) {
@@ -33,7 +33,7 @@ public class FilterMenuItem extends MenuItem {
 	}
 
 	/**
-	 * Gibt den angehangenen Filter zurück.
+	 * Gibt den angehangenen Filter zurÃ¼ck.
 	 */
 	public Filter getFilter() {
 		return filter;

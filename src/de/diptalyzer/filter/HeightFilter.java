@@ -1,10 +1,10 @@
-package de.diptalyzer.filter;
+ï»¿package de.diptalyzer.filter;
 
 import de.diptalyzer.model.DefaultPropperties;
 import de.diptalyzer.model.Glyph;
 
 /**
- * Filter für die Charakteristik 'HEIGHT'
+ * Filter fÃ¼r die Charakteristik 'HEIGHT'
  * 
  * @author tbrose
  */
@@ -12,7 +12,7 @@ public class HeightFilter implements Filter {
 
 	@Override
 	public String getName() {
-		return "Höhe";
+		return "HÃ¶he";
 	}
 
 	@Override

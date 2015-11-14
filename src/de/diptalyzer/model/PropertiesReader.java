@@ -1,4 +1,4 @@
-package de.diptalyzer.model;
+Ôªøpackage de.diptalyzer.model;
 
 import java.io.File;
 import java.io.IOException;
@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Lieﬂt eine Diptychon properties-Datei.
+ * Lie√üt eine Diptychon properties-Datei.
  */
 public class PropertiesReader {
 	/**
@@ -16,14 +16,14 @@ public class PropertiesReader {
 	private final File file;
 
 	/**
-	 * Erzeugt einen neuen Leser f¸r die gegebene Datei.
+	 * Erzeugt einen neuen Leser f√ºr die gegebene Datei.
 	 */
 	public PropertiesReader(File file) {
 		this.file = file;
 	}
 
 	/**
-	 * Lieﬂt alle Glyphen ein und gibt sie zur¸ck.
+	 * Lie√üt alle Glyphen ein und gibt sie zur√ºck.
 	 */
 	public List<Glyph> read() throws IOException {
 		byte[] bytes = Files.readAllBytes(file.toPath());

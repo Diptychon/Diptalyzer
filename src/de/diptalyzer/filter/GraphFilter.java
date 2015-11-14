@@ -1,16 +1,16 @@
-package de.diptalyzer.filter;
+ï»¿package de.diptalyzer.filter;
 
 import javafx.scene.chart.Chart;
 import de.diptalyzer.model.Glyph;
 
 /**
- * Ein Filter über eine graphisch darstellbare Charakteristik von Glyphen.
+ * Ein Filter Ã¼ber eine graphisch darstellbare Charakteristik von Glyphen.
  * 
  * @author tbrose
  */
 public interface GraphFilter extends Filter {
 	/**
-	 * Gibt ein Diagram dieser Charakteristik von der gegebenen Glyphe zurück.
+	 * Gibt ein Diagram dieser Charakteristik von der gegebenen Glyphe zurÃ¼ck.
 	 */
 	Chart getChart(Glyph glyph);
 }

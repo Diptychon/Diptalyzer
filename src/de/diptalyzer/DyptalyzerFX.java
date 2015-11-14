@@ -1,4 +1,4 @@
-package de.diptalyzer;
+ï»¿package de.diptalyzer;
 
 import java.io.File;
 import java.io.IOException;
@@ -49,12 +49,12 @@ public class DyptalyzerFX extends Application {
 	private static final int LEFT_FRAME_WIDTH = 120;
 
 	/**
-	 * Der Dateiname für den Filter des FileChoosers.
+	 * Der Dateiname fÃ¼r den Filter des FileChoosers.
 	 */
 	private static final String EXTENSION = "Glyph Properties.txt";
 
 	/**
-	 * Liste aller geöffneten Dokumente.
+	 * Liste aller geÃ¶ffneten Dokumente.
 	 */
 	private List<Document> documents = new ArrayList<>();
 
@@ -64,34 +64,34 @@ public class DyptalyzerFX extends Application {
 	private DiptalyzerController controller;
 
 	/**
-	 * Der Beschreibungstext für die generellen Daten.
+	 * Der Beschreibungstext fÃ¼r die generellen Daten.
 	 */
 	private GridPane general;
 
 	/**
-	 * Der Beschreibungstext für die gefilterten Daten.
+	 * Der Beschreibungstext fÃ¼r die gefilterten Daten.
 	 */
 	private GridPane filter;
 
 	/**
-	 * Die primäre Oberfläche des Programms.
+	 * Die primÃ¤re OberflÃ¤che des Programms.
 	 */
 	private Stage stage;
 
 	/**
-	 * true, wenn die Übersicht angezeigt weden soll - false, wenn die
-	 * Informationen der ausgewählten Glyphe gefiltert mit dem aktuellen Filter
+	 * true, wenn die Ãœbersicht angezeigt weden soll - false, wenn die
+	 * Informationen der ausgewÃ¤hlten Glyphe gefiltert mit dem aktuellen Filter
 	 * angezeigt werden soll.
 	 */
 	private boolean generalView = true;
 
 	/**
-	 * Aktuell ausgewählte Glyphe.
+	 * Aktuell ausgewÃ¤hlte Glyphe.
 	 */
 	private String selectedGlyph;
 
 	/**
-	 * Aktuell ausgewählter Filter.
+	 * Aktuell ausgewÃ¤hlter Filter.
 	 */
 	private Filter selectedFilter;
 
@@ -128,8 +128,8 @@ public class DyptalyzerFX extends Application {
 	}
 
 	/**
-	 * Methode, die beim Drücken des "Öffnen"-Buttons ausgeführt wird und einen
-	 * FileChooser öffnet.
+	 * Methode, die beim DrÃ¼cken des "Ã–ffnen"-Buttons ausgefÃ¼hrt wird und einen
+	 * FileChooser Ã¶ffnet.
 	 */
 	private void handleOpen(ActionEvent event) {
 		FileChooser fileChooser = new FileChooser();
@@ -151,7 +151,7 @@ public class DyptalyzerFX extends Application {
 	}
 
 	/**
-	 * Fügt das Dokument in die Liste der geöffneten Dokumente und den passenden
+	 * FÃ¼gt das Dokument in die Liste der geÃ¶ffneten Dokumente und den passenden
 	 * View der Ansicht hinzu.
 	 */
 	private void openDocument(Document document) {
@@ -169,7 +169,7 @@ public class DyptalyzerFX extends Application {
 	}
 
 	/**
-	 * Callback für das Ändern der Filtereinstellungen.
+	 * Callback fÃ¼r das Ã„ndern der Filtereinstellungen.
 	 */
 	private void onFilterSelect(String glyph, Filter filter) {
 		this.selectedGlyph = glyph;
@@ -188,7 +188,7 @@ public class DyptalyzerFX extends Application {
 	}
 
 	/**
-	 * Aktualisiert alle Views für alle gröffneten Dokumente.
+	 * Aktualisiert alle Views fÃ¼r alle grÃ¶ffneten Dokumente.
 	 */
 	private void setContentViews() {
 		final ObservableList<Node> infoChildren = controller.getInfoPane()
@@ -228,7 +228,7 @@ public class DyptalyzerFX extends Application {
 	}
 
 	/**
-	 * Erzeugt einen LineChart für das gegebene Dokument und den ausgewählten
+	 * Erzeugt einen LineChart fÃ¼r das gegebene Dokument und den ausgewÃ¤hlten
 	 * Filter.
 	 */
 	private Node getLineChart(Document doc) {
@@ -257,7 +257,7 @@ public class DyptalyzerFX extends Application {
 	}
 
 	/**
-	 * Erzeugt einen BarChart für das gegebene Dokument und den ausgewählten
+	 * Erzeugt einen BarChart fÃ¼r das gegebene Dokument und den ausgewÃ¤hlten
 	 * Filter.
 	 */
 	private Node getBarChart(Document doc) {
@@ -287,7 +287,7 @@ public class DyptalyzerFX extends Application {
 	}
 
 	/**
-	 * Erzeugt eine Graph-Ansicht für das gegebene Dokument und den ausgewählten
+	 * Erzeugt eine Graph-Ansicht fÃ¼r das gegebene Dokument und den ausgewÃ¤hlten
 	 * GraphFilter.
 	 */
 	private Node getGraph(Document doc) {
@@ -318,7 +318,7 @@ public class DyptalyzerFX extends Application {
 
 	/**
 	 * Filtert alle Glyphen im Dokument und gibt alle Charakteristika-Werte
-	 * zurück.
+	 * zurÃ¼ck.
 	 */
 	private double[] propertieValues(Document doc) {
 		return doc

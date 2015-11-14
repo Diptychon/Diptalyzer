@@ -1,4 +1,4 @@
-package de.diptalyzer.controller;
+ï»¿package de.diptalyzer.controller;
 
 import java.util.Arrays;
 import java.util.List;
@@ -16,39 +16,39 @@ import de.diptalyzer.model.Glyph;
  */
 public class FilterController implements ValuesController {
 	/**
-	 * Text für die Anzahl der gewählten Glyphe.
+	 * Text fÃ¼r die Anzahl der gewÃ¤hlten Glyphe.
 	 */
 	@FXML
 	private Text count;
 
 	/**
-	 * Text für den durchschnittlichen Charakteristika-Wert der gewählten
+	 * Text fÃ¼r den durchschnittlichen Charakteristika-Wert der gewÃ¤hlten
 	 * Glyphe.
 	 */
 	@FXML
 	private Text average;
 
 	/**
-	 * Text für den minimalen Charakteristika-Wert der gewählten Glyphe.
+	 * Text fÃ¼r den minimalen Charakteristika-Wert der gewÃ¤hlten Glyphe.
 	 */
 	@FXML
 	private Text minimum;
 
 	/**
-	 * Text für den maximalen Charakteristika-Wert der gewählten Glyphe.
+	 * Text fÃ¼r den maximalen Charakteristika-Wert der gewÃ¤hlten Glyphe.
 	 */
 	@FXML
 	private Text maximum;
 
 	/**
-	 * Text für die Standartabweichung des Charakteristika-Wertes der gewählten
+	 * Text fÃ¼r die Standartabweichung des Charakteristika-Wertes der gewÃ¤hlten
 	 * Glyphe.
 	 */
 	@FXML
 	private Text standardDeviation;
 
 	/**
-	 * Text für das 2 sigma Intervall des Charakteristika-Wertes der gewählten
+	 * Text fÃ¼r das 2 sigma Intervall des Charakteristika-Wertes der gewÃ¤hlten
 	 * Glyphe.
 	 */
 	@FXML
@@ -86,7 +86,7 @@ public class FilterController implements ValuesController {
 	}
 
 	/**
-	 * Berechnet für alle Glyphen den Charakteristik-Wert und speichert ihn in
+	 * Berechnet fÃ¼r alle Glyphen den Charakteristik-Wert und speichert ihn in
 	 * der Glyphe.
 	 */
 	private void calculatePropertie(Filter filter, List<Glyph> glyphs) {

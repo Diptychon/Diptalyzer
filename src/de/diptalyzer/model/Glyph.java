@@ -1,4 +1,4 @@
-package de.diptalyzer.model;
+ï»¿package de.diptalyzer.model;
 
 import java.awt.image.BufferedImage;
 import java.io.File;
@@ -20,7 +20,7 @@ public class Glyph {
 	private static final String COLUMN_ID = "GlyphID";
 
 	/**
-	 * Spaltenname für das/die zu repräsentierende Zeichen/-folge.
+	 * Spaltenname fÃ¼r das/die zu reprÃ¤sentierende Zeichen/-folge.
 	 */
 	private static final String COLUMN_CHARACTER = "Character";
 
@@ -46,7 +46,7 @@ public class Glyph {
 	private String id;
 
 	/**
-	 * Das/Die Zeichen/-folge, die diese Glyphe repräsentiert.
+	 * Das/Die Zeichen/-folge, die diese Glyphe reprÃ¤sentiert.
 	 */
 	private String character;
 
@@ -98,14 +98,14 @@ public class Glyph {
 	}
 
 	/**
-	 * Gibt den Speicherort des Bildes dieser Glyphe zurück.
+	 * Gibt den Speicherort des Bildes dieser Glyphe zurÃ¼ck.
 	 */
 	public File getImageFile() {
 		return imageFile;
 	}
 
 	/**
-	 * Lädt das Bild der Glyphe, falls nicht geladen, und gibt dieses zurück.
+	 * LÃ¤dt das Bild der Glyphe, falls nicht geladen, und gibt dieses zurÃ¼ck.
 	 */
 	public BufferedImage getImage() throws IOException {
 		if (image == null) {
@@ -115,49 +115,49 @@ public class Glyph {
 	}
 
 	/**
-	 * Gibt die ID dieser Glyphe zurück.
+	 * Gibt die ID dieser Glyphe zurÃ¼ck.
 	 */
 	public String getId() {
 		return id;
 	}
 
 	/**
-	 * Gibt zurück, welche/s Zeichen/-folge diese Glyphe repräsentiert.
+	 * Gibt zurÃ¼ck, welche/s Zeichen/-folge diese Glyphe reprÃ¤sentiert.
 	 */
 	public String getCharacter() {
 		return character;
 	}
 
 	/**
-	 * Gibt zurück, auf welcher Seite sich die Glyphe befindet.
+	 * Gibt zurÃ¼ck, auf welcher Seite sich die Glyphe befindet.
 	 */
 	public int getPage() {
 		return page;
 	}
 
 	/**
-	 * Gibt zurück, auf welcher Zeile sich die Glyphe befindet.
+	 * Gibt zurÃ¼ck, auf welcher Zeile sich die Glyphe befindet.
 	 */
 	public int getLine() {
 		return line;
 	}
 
 	/**
-	 * Gibt zurück, die wievielte Glyphe in der Zeile diese Glyphe ist.
+	 * Gibt zurÃ¼ck, die wievielte Glyphe in der Zeile diese Glyphe ist.
 	 */
 	public int getColumn() {
 		return column;
 	}
 
 	/**
-	 * Gibt züruck, ob für die gegebene Charakteristik ein Wert hinterlegt ist.
+	 * Gibt zÃ¼ruck, ob fÃ¼r die gegebene Charakteristik ein Wert hinterlegt ist.
 	 */
 	public boolean hasPropertie(String propertie) {
 		return properties.containsKey(propertie);
 	}
 
 	/**
-	 * Fügt der Glyphe den gegebenen Wert für die gegebene Charakteristik hinzu
+	 * FÃ¼gt der Glyphe den gegebenen Wert fÃ¼r die gegebene Charakteristik hinzu
 	 * oder aktualisiert diesen Wert.
 	 */
 	public void addPropertie(String propertie, Number value) {
@@ -165,18 +165,18 @@ public class Glyph {
 	}
 
 	/**
-	 * Gibt den Wert der Charakteristik mit dem gegebenen Namen zurück.
+	 * Gibt den Wert der Charakteristik mit dem gegebenen Namen zurÃ¼ck.
 	 */
 	public Number getPropertie(String properite) {
 		return properties.get(properite);
 	}
 
 	/**
-	 * Ließt die Zeile als Glyphe ein und setzt alle Charakteristika, die in der
+	 * LieÃŸt die Zeile als Glyphe ein und setzt alle Charakteristika, die in der
 	 * Zeile vermerkt sind.
 	 * 
-	 * Die Methode geht davon aus, dass außer der Id und dem Zeichen alle
-	 * weiteren Werte in Integer, oder Double konvertiert werden können.
+	 * Die Methode geht davon aus, dass auÃŸer der Id und dem Zeichen alle
+	 * weiteren Werte in Integer, oder Double konvertiert werden kÃ¶nnen.
 	 */
 	public static Glyph decode(File folder, String[] columns, String line) {
 		final String[] split = line.split(" ");
@@ -199,7 +199,7 @@ public class Glyph {
 	}
 
 	/**
-	 * Gibt zurück, ob dieser String eine ganze Zahl repräsentiert.
+	 * Gibt zurÃ¼ck, ob dieser String eine ganze Zahl reprÃ¤sentiert.
 	 */
 	private static boolean isInteger(String str) {
 		if (str == null) {

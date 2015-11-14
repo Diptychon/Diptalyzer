@@ -1,4 +1,4 @@
-package de.diptalyzer.filter;
+ï»¿package de.diptalyzer.filter;
 
 import java.awt.image.BufferedImage;
 import java.io.IOException;
@@ -16,7 +16,7 @@ import javax.imageio.ImageIO;
 import de.diptalyzer.model.Glyph;
 
 /**
- * Filter für die Charakteristik der Quadranten-Verteilung der Glyphe.
+ * Filter fÃ¼r die Charakteristik der Quadranten-Verteilung der Glyphe.
  * 
  * @author tbrose
  */
@@ -87,8 +87,8 @@ public class QuadrantFilter implements GraphFilter {
 	}
 
 	/**
-	 * Gibt den Quadranten (0-3) für die gegebenen Koordinaten in den gegebenen
-	 * Bild zurück.
+	 * Gibt den Quadranten (0-3) fÃ¼r die gegebenen Koordinaten in den gegebenen
+	 * Bild zurÃ¼ck.
 	 */
 	private int getQuadrant(BufferedImage image, int x, int y) {
 		final int dx = x - (image.getWidth() / 2);

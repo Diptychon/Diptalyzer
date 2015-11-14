@@ -1,4 +1,4 @@
-package de.diptalyzer.model;
+﻿package de.diptalyzer.model;
 
 /**
  * Sammlung aller Charakeristika, die in der von Diptychon erzeugten Datei
@@ -36,7 +36,7 @@ public enum DefaultPropperties {
 	}
 
 	/**
-	 * Gibt den Namen der Charakteristik zur�ck.
+	 * Gibt den Namen der Charakteristik zurück.
 	 */
 	public String getName() {
 		return name;

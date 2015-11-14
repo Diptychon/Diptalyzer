@@ -1,4 +1,4 @@
-package de.diptalyzer.model;
+ï»¿package de.diptalyzer.model;
 
 import java.io.File;
 import java.io.IOException;
@@ -11,7 +11,7 @@ import de.diptalyzer.controller.ValuesController;
 import de.diptalyzer.filter.Filter;
 
 /**
- * Ein Dokument ist eine geöffnete Diptychon propperties-Datei.
+ * Ein Dokument ist eine geÃ¶ffnete Diptychon propperties-Datei.
  */
 public class Document {
 	/**
@@ -25,13 +25,13 @@ public class Document {
 	private final List<Glyph> glyphs;
 
 	/**
-	 * Das UI-Element, welches generelle Informationen für den Nutzer
+	 * Das UI-Element, welches generelle Informationen fÃ¼r den Nutzer
 	 * bereitstellt.
 	 */
 	private Node general;
 
 	/**
-	 * Das UI-Element, welches die Filter-Ergebnisse für den Nutzer
+	 * Das UI-Element, welches die Filter-Ergebnisse fÃ¼r den Nutzer
 	 * bereitstellt.
 	 */
 	private Node filter;
@@ -50,21 +50,21 @@ public class Document {
 	}
 
 	/**
-	 * Gibt den Speicherort des Dokuments zurück.
+	 * Gibt den Speicherort des Dokuments zurÃ¼ck.
 	 */
 	public File getLocation() {
 		return location;
 	}
 
 	/**
-	 * Gibt alle Glyphen, die aus der Datei gelesen wurden, zurück.
+	 * Gibt alle Glyphen, die aus der Datei gelesen wurden, zurÃ¼ck.
 	 */
 	public List<Glyph> getGlyphs() {
 		return glyphs;
 	}
 
 	/**
-	 * Gibt die Ansicht mit generellen Informationen zurück. Falls diese noch
+	 * Gibt die Ansicht mit generellen Informationen zurÃ¼ck. Falls diese noch
 	 * nie zuvor angefordert wurde, so wird sie erstellt.
 	 */
 	public Node getGeneralView() {
@@ -83,7 +83,7 @@ public class Document {
 	}
 
 	/**
-	 * Gibt die Ansicht mit gefilterten Werten zurück. Falls diese noch nie
+	 * Gibt die Ansicht mit gefilterten Werten zurÃ¼ck. Falls diese noch nie
 	 * zuvor angefordert wurde, so wird sie erstellt.
 	 */
 	public Node getFilteredView(String glyph, Filter filter) {
@@ -102,14 +102,14 @@ public class Document {
 	}
 
 	/**
-	 * Gibt die Ansicht mit generellen Informationen zurück.
+	 * Gibt die Ansicht mit generellen Informationen zurÃ¼ck.
 	 */
 	public Node peekGeneralView() {
 		return general;
 	}
 
 	/**
-	 * Gibt die Ansicht mit gefilterten Werten zurück.
+	 * Gibt die Ansicht mit gefilterten Werten zurÃ¼ck.
 	 */
 	public Node peekFilteredView() {
 		return filter;

@@ -1,4 +1,4 @@
-package de.diptalyzer.controller;
+ï»¿package de.diptalyzer.controller;
 
 import java.util.Comparator;
 import java.util.HashMap;
@@ -18,37 +18,37 @@ import de.diptalyzer.model.Glyph;
  */
 public class GeneralController implements ValuesController {
 	/**
-	 * Text für die Anzahl der Seiten dieses Dokumentes.
+	 * Text fÃ¼r die Anzahl der Seiten dieses Dokumentes.
 	 */
 	@FXML
 	private Text pages;
 
 	/**
-	 * Text für die Anzahl der Zeilen dieses Dokumentes.
+	 * Text fÃ¼r die Anzahl der Zeilen dieses Dokumentes.
 	 */
 	@FXML
 	private Text lines;
 
 	/**
-	 * Text für die Anzahl der Glyphen dieses Dokumentes.
+	 * Text fÃ¼r die Anzahl der Glyphen dieses Dokumentes.
 	 */
 	@FXML
 	private Text count;
 
 	/**
-	 * Text für die Anzahl der verschiedenen Glyphen dieses Dokumentes.
+	 * Text fÃ¼r die Anzahl der verschiedenen Glyphen dieses Dokumentes.
 	 */
 	@FXML
 	private Text different;
 
 	/**
-	 * Text für die häufigste Glyphe dieses Dokumentes.
+	 * Text fÃ¼r die hÃ¤ufigste Glyphe dieses Dokumentes.
 	 */
 	@FXML
 	private Text mostGlyph;
 
 	/**
-	 * Text für die Anzahl der häufigsten Glyphe dieses Dokumentes.
+	 * Text fÃ¼r die Anzahl der hÃ¤ufigsten Glyphe dieses Dokumentes.
 	 */
 	@FXML
 	private Text mostCount;
