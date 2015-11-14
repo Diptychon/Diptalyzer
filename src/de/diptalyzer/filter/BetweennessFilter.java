@@ -10,28 +10,28 @@ import de.diptalyzer.model.Glyph;
  */
 public class BetweennessFilter implements Filter {
 
-	@Override
-	public String getName() {
-		return "'Betweenness'";
-	}
+    @Override
+    public String getName() {
+        return "'Betweenness'";
+    }
 
-	@Override
-	public String neededProperty() {
-		return DefaultPropperties.BETWEENNESS.getName();
-	}
+    @Override
+    public String neededProperty() {
+        return DefaultPropperties.BETWEENNESS.getName();
+    }
 
-	@Override
-	public boolean canCalculatePropertie() {
-		return false;
-	}
+    @Override
+    public boolean canCalculatePropertie() {
+        return false;
+    }
 
-	@Override
-	public Number calculatePropertie(Glyph glyph) {
-		throw new UnsupportedOperationException();
-	}
+    @Override
+    public Number calculatePropertie(Glyph glyph) {
+        throw new UnsupportedOperationException();
+    }
 
-	@Override
-	public boolean isIntFilter() {
-		return false;
-	}
+    @Override
+    public boolean isIntFilter() {
+        return false;
+    }
 }

@@ -9,8 +9,8 @@ import de.diptalyzer.model.Glyph;
  * @author tbrose
  */
 public interface GraphFilter extends Filter {
-	/**
-	 * Gibt ein Diagram dieser Charakteristik von der gegebenen Glyphe zurück.
-	 */
-	Chart getChart(Glyph glyph);
+    /**
+     * Gibt ein Diagram dieser Charakteristik von der gegebenen Glyphe zurück.
+     */
+    Chart getChart(Glyph glyph);
 }

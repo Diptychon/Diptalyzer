@@ -10,28 +10,28 @@ import de.diptalyzer.model.Glyph;
  */
 public class HolesFilter implements Filter {
 
-	@Override
-	public String getName() {
-		return "'Holes'";
-	}
+    @Override
+    public String getName() {
+        return "'Holes'";
+    }
 
-	@Override
-	public String neededProperty() {
-		return DefaultPropperties.HOLES.getName();
-	}
+    @Override
+    public String neededProperty() {
+        return DefaultPropperties.HOLES.getName();
+    }
 
-	@Override
-	public boolean canCalculatePropertie() {
-		return false;
-	}
+    @Override
+    public boolean canCalculatePropertie() {
+        return false;
+    }
 
-	@Override
-	public Number calculatePropertie(Glyph glyph) {
-		throw new UnsupportedOperationException();
-	}
+    @Override
+    public Number calculatePropertie(Glyph glyph) {
+        throw new UnsupportedOperationException();
+    }
 
-	@Override
-	public boolean isIntFilter() {
-		return true;
-	}
+    @Override
+    public boolean isIntFilter() {
+        return true;
+    }
 }
