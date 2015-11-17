@@ -9,6 +9,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map.Entry;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 import javafx.application.Application;
 import javafx.collections.ObservableList;
@@ -321,8 +322,13 @@ public class DyptalyzerFX extends Application {
      * zurück.
      */
     private double[] propertieValues(Document doc) {
-        return doc
-                .getGlyphs()
+        List<Glyph> glyphs;
+        if (selectedGlyph.equals(DiptalyzerController.CHOOSE)) {
+            glyphs = doc.getGlyphs();
+        } else {
+            glyphs = Utils.filter(doc.getGlyphs(), selectedGlyph);
+        }
+        return glyphs
                 .stream()
                 .mapToDouble(
                         g -> g.getPropertie(selectedFilter.neededProperty())

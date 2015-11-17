@@ -21,7 +21,7 @@
 
 	<Text text="Standardabweichung:" GridPane.rowIndex="4" />
 
-	<Text text="95%-Interval:" GridPane.rowIndex="5" />
+	<Text text="95%-Intervall:" GridPane.rowIndex="5" />
 	
 	<Text text="Visualisierung:" GridPane.rowIndex="6" />
 		<padding>
