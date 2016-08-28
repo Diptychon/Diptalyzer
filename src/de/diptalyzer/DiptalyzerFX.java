@@ -1,4 +1,20 @@
-﻿package de.diptalyzer;
+﻿/*
+ * This file is part of Diptalyzer.
+ *
+ * Diptalyzer is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * Diptalyzer is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with Diptalyzer. If not, see <http://www.gnu.org/licenses/>.
+ */
+package de.diptalyzer;
 
 import java.io.File;
 import java.io.IOException;
@@ -9,7 +25,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map.Entry;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 import javafx.application.Application;
 import javafx.collections.ObservableList;
@@ -42,7 +57,7 @@ import de.diptalyzer.model.PropertiesReader;
 /**
  * Hauptklasse des Programms, erzeugt das Fenster.
  */
-public class DyptalyzerFX extends Application {
+public class DiptalyzerFX extends Application {
     /**
      * Die Breite des Beschreibungstextes.
      */
@@ -106,6 +121,11 @@ public class DyptalyzerFX extends Application {
             general.setMinWidth(LEFT_FRAME_WIDTH);
             filter.setMaxWidth(LEFT_FRAME_WIDTH);
             filter.setMinWidth(LEFT_FRAME_WIDTH);
+            
+            primaryStage.getIcons().add(
+                    new Image(this.getClass().getResourceAsStream(
+                            "/icons/diptalyzer_icon.png")));
+            primaryStage.setTitle("Diptalyzer");
 
             FXMLLoader loader = Utils.loadFxml("Diptalyzer.fxml");
 
